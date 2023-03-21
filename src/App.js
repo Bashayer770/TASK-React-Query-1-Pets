@@ -1,12 +1,17 @@
 import "./App.css";
 import PetsList from "./Components/PetsList";
-import petsData from "./petsData";
+// import petsData from "./petsData";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+
+const queryClient = new QueryClient();
 
 function App() {
   return (
-    <div className="App">
-      <PetsList petsData={petsData} />
-    </div>
+    <QueryClientProvider client={queryClient}>
+      <div className="App">
+        <PetsList petsData={[]} />
+      </div>
+    </QueryClientProvider>
   );
 }
 
