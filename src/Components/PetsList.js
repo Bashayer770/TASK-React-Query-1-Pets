@@ -18,7 +18,7 @@ function PetsList({ petsData }) {
         pet.name.toLowerCase().includes(query.toLowerCase()) &&
         pet.type.includes(type)
     )
-    .map((pet) => <PetItem key={pet.id} pet={pet} handleAdopt={handleAdopt} />);
+    .map((pet) => <PetItem key={pet.id} pet={pet} />);
   return (
     <section id="doctors" class="doctor-section pt-140">
       <div class="container">
