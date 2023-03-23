@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import PetItem from "./PetItem";
 import list from "../utils/api/pets";
 import { useQuery } from "@tanstack/react-query";
+import { NavLink } from "react-router-dom";
 
 function PetsList({ petsData }) {
   const [query, setQuery] = useState("");
@@ -28,7 +29,7 @@ function PetsList({ petsData }) {
               <h1 class="mb-25 wow fadeInUp" data-wow-delay=".2s">
                 Fur-ends
               </h1>
-              <div class="input-group rounded">
+              <div class="input-group rounded PetButton">
                 <input
                   type="search"
                   class="form-control rounded"
@@ -36,7 +37,13 @@ function PetsList({ petsData }) {
                   aria-label="Search"
                   aria-describedby="search-addon"
                   onChange={(e) => setQuery(e.target.value)}
+                  style={{
+                    width: "100%",
+                  }}
                 />
+                <NavLink to="/AddPet">
+                  <button>Add pet</button>
+                </NavLink>
               </div>
               <br />
               Type:

@@ -41,3 +41,11 @@
   border: #282c34 4px solid;
   border-radius: 4px;
 }
+
+.PetButton {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
