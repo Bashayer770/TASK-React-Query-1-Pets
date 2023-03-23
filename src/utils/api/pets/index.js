@@ -9,7 +9,7 @@ export function adopt(id) {
 }
 
 export function Addpet(x) {
-  return axios.post(`${URL}/pets`, x);
+  return axios.post(`${URL}/pets/`, x);
 }
 
 export default list;
