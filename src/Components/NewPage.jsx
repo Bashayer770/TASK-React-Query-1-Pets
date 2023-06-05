@@ -18,7 +18,7 @@ const NewPage = () => {
           <Field as="input" name="type" type="text"></Field>
           <Field as="input" name="image" type="text"></Field>
           <button type="submit">Submit</button>
-          <button typr="reset">Reset</button>
+          <button type="reset">Reset</button>
         </Form>
       </Formik>
     </div>
