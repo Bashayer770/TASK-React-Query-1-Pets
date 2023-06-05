@@ -9,7 +9,7 @@ function PetsList({ petsData }) {
   const [type, setType] = useState("");
   const [pets, setPets] = useState(petsData);
   const res = useQuery(["pets"], () => list());
-
+  //
   const handleAdopt = (petId) =>
     setPets(pets.filter((pet) => pet.id !== petId));
 
